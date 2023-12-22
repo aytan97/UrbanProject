@@ -1,0 +1,61 @@
+
+
+@mixin display-flex($flex-direction, $justify-content, $align-items, $gap) {
+    display: flex;
+    flex-wrap: wrap;
+
+    @if $flex-direction !='null' or $align-items !='null' or $justify-content !='null' or $gap !='null' {
+        flex-direction: $flex-direction;
+        justify-content: $justify-content;
+        align-items: $align-items;
+        gap: $gap;
+    }
+}
+
+//   @include display-flex(null, center, center, null)
+
+
+@mixin a-button ($background-color, $color, $font-size, $line-height, ) {
+    background-color: $background-color;
+    color: $color;
+    font-size: $font-size;
+    border-radius: 4px;
+    border: 0;
+    cursor: pointer;
+    display: inline-block;
+    font-weight: 700;
+    height: 2.85em;
+    line-height: $line-height;
+    padding: 0 1.5em;
+    text-align: center;
+    white-space: nowrap;
+
+    &:hover {
+        background-color: $button-hover-color;
+        color: $color;
+        transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+    }
+}
+
+
+@mixin image {
+    width: 30%;
+
+    .inner-img-border {
+        display: block;
+        margin: 0 0 2em 0;
+        border-radius: 100%;
+        box-sizing: border-box;
+        border: none;
+        box-shadow: 0px 0px 0px 7px #fff, 0px 0px 0px 8px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+
+        a {
+            img {
+                width: 100%;
+                height: auto;
+            }
+        }
+    }
+
+}
