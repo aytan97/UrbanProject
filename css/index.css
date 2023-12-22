@@ -138,7 +138,7 @@ h1 {
   flex-direction: row;
   justify-content: space-between;
   gap: 20px;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   width: 100%;
 }
 #banner-white .container .inner .inner-img,
